@@ -1,7 +1,7 @@
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { useDispatch } from 'react-redux';
-import { addContact } from 'redux/contactsSlice';
+import { addContact } from 'redux/operations';
 
 export default function Form() {
     const dispatch = useDispatch();
@@ -32,7 +32,7 @@ export default function Form() {
             title: "Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"}}
             id="outlined-basic"
             label="Telephone number" 
-            type="text"
+            type="number"
             name="number"
             required
         />

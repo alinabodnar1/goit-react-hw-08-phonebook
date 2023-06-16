@@ -3,8 +3,7 @@ import Button from '@mui/material/Button';
 import PropTypes from 'prop-types';
 import List from '@mui/material/List';
 import { useDispatch } from 'react-redux';
-import { deleteContact } from 'redux/contactsSlice';
-
+import { deleteContact } from 'redux/operations';
 
 export default function ContactsListItem({contact}){
     const dispatch = useDispatch();
