@@ -8,6 +8,8 @@ import { deleteContact } from 'redux/operations';
 export default function ContactsListItem({contact}){
     const dispatch = useDispatch();
     const handleDelete = () => dispatch(deleteContact(contact.id));
+    // const stringName = contact.name.toString();
+    // const stringNumber = contact.number.toString();
     return (
         <List key={contact.id}>
             <span>{contact.name}</span> {' '}
