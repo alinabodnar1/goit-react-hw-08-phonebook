@@ -20,7 +20,7 @@ export default function App() {
         <h1>Phonebook</h1>
         <Form />
       
-        {isLoading && !error && <b>Request in progress...</b>}
+        {isLoading && !error && <b> Wait, request in progress...</b>}
         
         <h2>Contacts</h2>
         <Filter />

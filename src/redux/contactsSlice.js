@@ -29,24 +29,16 @@ const contactsSlice = createSlice({
     [addContact.fulfilled]:(state, action) => {
       state.isLoading = false;
       state.error = null;
-      
-        if (state.items.find(contact => contact.name.toLowerCase().trim() === action.payload.name.toLowerCase().trim())) {
+      // state.items.push(action.payload); 
+      if (state.items.find(contact => contact.name.toLowerCase().trim() === action.payload.name.toLowerCase().trim())) {
             return alert(`The contact "${action.payload.name}" is already in the contacts!`);
         } else  if (state.items.find(contact => contact.number.toLowerCase().trim() === action.payload.number.toLowerCase().trim())) {
-            return alert(`The contact "${action.payload.number}" is already in the contacts!`);
+            return alert(`The number "${action.payload.number}" is already in the contacts!`);
         }   else{
             return state.items.push(action.payload);  
         }
     },
-    prepare(name, number) {
-        return {
-            payload: {
-                name,
-                number,
-                id: nanoid(5),
-            },
-        };
-    },
+  
     [addContact.rejected]: handleRejected,
 
     [deleteContact.pending]: handlePending,
@@ -61,3 +53,4 @@ const contactsSlice = createSlice({
 });
 
 export const contactsReducer = contactsSlice.reducer;
+

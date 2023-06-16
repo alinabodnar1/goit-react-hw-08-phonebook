@@ -9,7 +9,10 @@ export default function Form() {
     const handleSubmit = evt => {
       evt.preventDefault();
       const form = evt.target;
-      dispatch(addContact(form.elements.name.value,form.elements.number.value));
+      dispatch(addContact({
+        name: form.elements.name.value,
+        number: form.elements.number.value,
+      }));
       form.reset();
     }
   
