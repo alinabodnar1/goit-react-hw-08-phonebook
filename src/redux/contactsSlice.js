@@ -18,7 +18,7 @@ const contactsSlice = createSlice({
   initialState: contactsInitialState,
   extraReducers: {
     [fetchContacts.pending]: handlePending,
-    [fetchContacts.fulfilled](state, action) {
+    [fetchContacts.fulfilled]:(state, action) => {
       state.isLoading = false;
       state.error = null;
       state.items = action.payload;
@@ -26,11 +26,11 @@ const contactsSlice = createSlice({
     [fetchContacts.rejected]: handleRejected,
 
     [addContact.pending]: handlePending,
-    [addContact.fulfilled](state, action) {
+    [addContact.fulfilled]:(state, action) => {
       state.isLoading = false;
       state.error = null;
       state.items.push(action.payload);
-      
+
       console.log("state.items:", state.items);
         // if (state.find(contact => contact.name.toLowerCase().trim() === action.payload.name.toLowerCase().trim())) {
         //     return alert(`The contact "${action.payload.name}" is already in the contacts!`);
@@ -43,7 +43,7 @@ const contactsSlice = createSlice({
     [addContact.rejected]: handleRejected,
 
     [deleteContact.pending]: handlePending,
-    [deleteContact.fulfilled](state, action) {
+    [deleteContact.fulfilled]:(state, action) => {
       state.isLoading = false;
       state.error = null;
       const index = state.findIndex(contact => contact.id === action.payload);
