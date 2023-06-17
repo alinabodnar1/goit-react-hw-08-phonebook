@@ -8,7 +8,11 @@ export const selectFilter = state => state.filter;
 export const visibleContacts = createSelector(
     [selectContacts, selectFilter],
     (contacts, filter) => {
-        return contacts.filter(contact => contact.name.concat(contact.number).includes(filter.toLowerCase().trim()));
+        return contacts.filter(contact =>
+            contact.name
+                .concat(contact.number)
+                .toLowerCase()
+                .includes(filter.toLowerCase().trim()));
  })
          
     
