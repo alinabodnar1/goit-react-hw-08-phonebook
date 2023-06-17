@@ -3,7 +3,7 @@
     padding: 10px;
     display: flex;
     row-gap: 30px;
-    background-image: url('./images/phonebook2-bg.jpeg');
+    background-image: url('../images/phonebook2-bg.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

@@ -1,11 +1,11 @@
-import Form from './Form/Form';
-import ContactsList from './ContactsList/ContactsList';
-import Filter from './Filter/Filter';
+import Form from '../components/Form/Form';
+import ContactsList from '../components/ContactsList/ContactsList';
+import Filter from '../components/Filter/Filter';
 import { useEffect } from "react";
 import { useDispatch, useSelector } from 'react-redux';
 import { selectError, selectIsLoading } from 'redux/selectors';
 import { fetchContacts } from 'redux/operations';
-import css from "App.module.css";
+import css from "./App.module.css";
 
 export default function App() {
   const dispatch = useDispatch();
