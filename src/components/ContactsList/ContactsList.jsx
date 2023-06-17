@@ -7,7 +7,7 @@ export default function ContactsList() {
     const contacts = useSelector(visibleContacts);
     console.log("contacts in ContactsList:", contacts);
    
-    return (<ul>
+    return (<ul >
             { contacts.map(contact => (
                 <ContactsListItem
                     key={contact.id}

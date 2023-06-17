@@ -15,7 +15,7 @@ export default function Filter() {
   return (
       <TextField
         id="standard-basic"
-        label="Filter"
+        label="Filter by name"
         variant="standard"
         onChange={handleFilterChange}
         value={textFilter}

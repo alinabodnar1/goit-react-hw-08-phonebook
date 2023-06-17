@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from 'react-redux';
 import { selectError, selectIsLoading } from 'redux/selectors';
 import { fetchContacts } from 'redux/operations';
+import css from "App.module.css";
 
 export default function App() {
   const dispatch = useDispatch();
@@ -16,15 +17,20 @@ export default function App() {
   }, [dispatch]);
 
   return (
-      <div style={{marginLeft: "20px"}}>
-        <h1>Phonebook</h1>
+    <div className={css.container} >
+      <div className={css.form}>
         <Form />
-      
-        {isLoading && !error && <b> Wait, request in progress...</b>}
-        
-        <h2>Contacts</h2>
-        <Filter />
-        <ContactsList />
+        {isLoading && !error && <p className={css.loading}> Wait, request is in progress...</p>}
+      </div>
+  
+      <div className={css.list}>
+        <h1 className={css.title}>Phonebook</h1>
+          <ContactsList /> 
+      </div >
+
+      <div className={css.filter}>
+          <Filter />
+      </div>
       </div>
     );
   }

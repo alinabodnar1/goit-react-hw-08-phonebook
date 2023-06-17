@@ -4,24 +4,29 @@ import PropTypes from 'prop-types';
 import List from '@mui/material/List';
 import { useDispatch } from 'react-redux';
 import { deleteContact } from 'redux/operations';
+import CheckIcon from '@mui/icons-material/Check';
+import css from './ContactsListItem.module.css';
 
 export default function ContactsListItem({contact}){
     const dispatch = useDispatch();
     const handleDelete = () => dispatch(deleteContact(contact.id));
-    // const stringName = contact.name.toString();
-    // const stringNumber = contact.number.toString();
     return (
         <List key={contact.id}>
-            <span>{contact.name}</span> {' '}
-            <span>{contact.number}</span> {' '}
-            
-            <Button 
-                variant="outlined"
-                type="button"
-                onClick={handleDelete}
-            >    
-                DELETE
-            </Button>
+            <div className={css.container}>
+                <CheckIcon />
+                <span className={css.name}>{contact.name}</span> 
+                <span className={css.number}>{contact.number}</span>
+                <div className={css['button-container']}>
+                    <button 
+                    variant="outlined"
+                    type="button"
+                    className={css.button}
+                    onClick={handleDelete} >    
+                    Delete
+                </button>
+                </div>
+                
+            </div>
         </List>
     )
     

@@ -6,6 +6,7 @@ const contactsInitialState = initialState.contacts;
 
 const handlePending = state => {
   state.isLoading = true;
+  state.error = null;
 };
 
 const handleRejected = (state, action) => {
@@ -38,7 +39,6 @@ const contactsSlice = createSlice({
             return state.items.push(action.payload);  
         }
     },
-  
     [addContact.rejected]: handleRejected,
 
     [deleteContact.pending]: handlePending,

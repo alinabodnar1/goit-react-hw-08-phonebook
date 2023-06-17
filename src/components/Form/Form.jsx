@@ -1,7 +1,7 @@
 import TextField from '@mui/material/TextField';
-import Button from '@mui/material/Button';
 import { useDispatch } from 'react-redux';
 import { addContact } from 'redux/operations';
+import css from './Form.module.css';
 
 export default function Form() {
     const dispatch = useDispatch();
@@ -17,9 +17,10 @@ export default function Form() {
     }
   
     return (
-        <form onSubmit={handleSubmit}>
-        <TextField
-          inputProps={{
+      <form className={css.form} onSubmit={handleSubmit}>
+        <div className={css.container}>
+          <TextField  
+            inputProps={{
             pattern: "^[a-zA-Z-яА-Я]+(([' -][a-zA-Z-яА-Я ])?[a-zA-Z-яА-Я]*)*$",
             title: "Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"}}
             id="outlined-basic"
@@ -28,9 +29,9 @@ export default function Form() {
             name="name"
             required
           />
-        {' '}
-        <TextField
-          inputProps={{
+       
+          <TextField
+            inputProps={{
             pattern: "?{1,4}?[-.]??{1,3}??[-.]?{1,4}[-.]?{1,4}[-.]?{1,9}",
             title: "Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"}}
             id="outlined-basic"
@@ -38,12 +39,15 @@ export default function Form() {
             type="number"
             name="number"
             required
-        />
-          {' '}
-        <Button
-          variant="contained"
-          type="submit"
-          >Add contact</Button>
+          />
+        </div>
+        <div className={css['button-container']}>
+          <button
+            variant="contained"
+            type="submit"
+            className={css.button}
+          >Add contact</button>
+        </div>
         </form>
     );
   }
