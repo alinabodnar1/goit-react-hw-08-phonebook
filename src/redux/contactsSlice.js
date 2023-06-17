@@ -30,13 +30,8 @@ const contactsSlice = createSlice({
       .addCase(addContact.fulfilled, (state, action) => {
         state.isLoading = false;
         state.error = null;
-        if (state.items.find(contact => contact.name.toLowerCase().trim() === action.payload.name.toLowerCase().trim())) {
-            alert(`The contact "${action.payload.name}" is already in the contacts!`);
-        } else  if (state.items.find(contact => contact.number.toLowerCase().trim() === action.payload.number.toLowerCase().trim())) {
-            alert(`The number "${action.payload.number}" is already in the contacts!`);
-        } else {
-           state.items.push(action.payload); 
-        }
+        state.items.push(action.payload); 
+        
       })
       .addCase(addContact.rejected, handleRejected)
       .addCase(deleteContact.pending, handlePending)
