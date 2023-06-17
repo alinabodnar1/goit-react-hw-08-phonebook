@@ -1,13 +1,14 @@
 .container {
     display: flex;
+    gap: 10px;
 }
-.name{
+/* .name{
     margin-left: 10px;
 }
 .number{
     margin-left: 10px;
     margin-right: 10px;
-}
+} */
 .button-container{
     margin-top: -2px;
 }
