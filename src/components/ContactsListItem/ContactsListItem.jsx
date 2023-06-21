@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import List from '@mui/material/List';
 import { useDispatch } from 'react-redux';
-import { deleteContact } from 'redux/operations';
+import { deleteContact } from 'redux/contacts/operations';
 import CheckIcon from '@mui/icons-material/Check';
 import css from './ContactsListItem.module.css';
 

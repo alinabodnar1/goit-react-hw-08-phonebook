@@ -1,6 +1,6 @@
 import TextField from '@mui/material/TextField';
 import { useDispatch } from 'react-redux';
-import { addContact } from 'redux/operations';
+import { addContact } from 'redux/contacts/operations';
 import css from './Form.module.css';
 
 export default function Form() {
