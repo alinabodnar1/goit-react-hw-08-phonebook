@@ -1,15 +1,15 @@
 .container {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  gap: 10px;
 }
-.button-container{
-    margin-left: 10px;
-    margin-top: -2x;
+.button-container {
+  margin-left: 10px;
+  margin-top: -2x;
 }
-.button{
-    color: white;
-    background-color: brown;
-    border-color: transparent;
-    border-radius: 10px;
-    cursor: pointer;
+.button {
+  color: white;
+  background-color: brown;
+  border-color: transparent;
+  border-radius: 10px;
+  cursor: pointer;
 }

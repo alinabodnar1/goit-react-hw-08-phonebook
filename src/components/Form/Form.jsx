@@ -22,7 +22,7 @@ export default function Form() {
       form.reset();
       return;
     }
-     toast.info("Contact can't be empty. Enter some text!");
+    toast.info("Contact can't be empty. Enter some text!");
   };
 
   return (
@@ -59,9 +59,7 @@ export default function Form() {
           Add contact
         </button>
       </div>
-      <ToastContainer
-            autoClose={3000}
-            position="top-left" />
+      <ToastContainer autoClose={3000} position="top-left" />
     </form>
   );
 }
