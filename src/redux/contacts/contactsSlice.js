@@ -4,7 +4,7 @@ import {
   addContact,
   deleteContact,
   fetchContacts,
-} from '../contacts/operations';
+} from './operations';
 import { logOut } from 'redux/auth/operations';
 
 const contactsInitialState = initialState.contacts;
