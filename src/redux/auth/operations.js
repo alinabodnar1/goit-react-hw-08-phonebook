@@ -38,7 +38,6 @@ export const logIn = createAsyncThunk(
   }
 );
 
-
 export const logOut = createAsyncThunk(
   'auth/logout',
   async (_, thunkAPI) => {
@@ -49,7 +48,6 @@ export const logOut = createAsyncThunk(
     return thunkAPI.rejectWithValue(error.message);
   }
 });
-
 
 export const refreshUser = createAsyncThunk(
   'auth/refresh',

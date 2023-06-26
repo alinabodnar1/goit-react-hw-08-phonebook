@@ -18,8 +18,10 @@
   padding-left: 70px;
   display: block;
 }
-
 .wrapper {
   display: flex;
   column-gap: 100px;
+}
+.titleContacts{
+  margin-top: 40px;
 }

@@ -20,11 +20,9 @@ export default function Contacts() {
       <div>
         <Form />
         <div>{isLoading && 'Request in progress...'}</div>
-        <h2>Your contacts:</h2>
-
+        <h2 className={css.titleContacts}>Your contacts:</h2>
         <ContactsList />
       </div>
-
       <Filter />
     </div>
   );
