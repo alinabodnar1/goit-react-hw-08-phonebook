@@ -12,7 +12,7 @@ export default function ContactsListItem({ contact }) {
   return (
     <List key={contact.id}>
       <div className={css.container}>
-        <CheckIcon />
+        <CheckIcon color="success"/>
         <span className={css.name}>{contact.name}</span>
         <span className={css.number}>{contact.number}</span>
         <div className={css['button-container']}>

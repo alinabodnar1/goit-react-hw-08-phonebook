@@ -1,0 +1,25 @@
+.container {
+  width: 960px;
+  height: 600px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+  align-items: center;
+  justify-content: center;
+  background-image: url('/src/images/phonebook.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.title {
+  font-weight: 500;
+  font-size: 30;
+  text-align: center;
+  padding-top: 90px;
+  padding-left: 70px;
+  display: block;
+}
+
+.wrapper {
+  display: flex;
+  column-gap: 100px;
+}

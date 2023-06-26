@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { addContact } from 'redux/contacts/operations';
 import css from './Form.module.css';
 import { ToastContainer, toast } from 'react-toastify';
+import { Button } from '@mui/material';
 
 export default function Form() {
   const dispatch = useDispatch();
@@ -38,6 +39,7 @@ export default function Form() {
           label="Name"
           type="text"
           name="name"
+          color="success"
           required
         />
 
@@ -51,13 +53,14 @@ export default function Form() {
           label="Telephone number"
           type="number"
           name="number"
+          color="success"
           required
         />
       </div>
       <div className={css['button-container']}>
-        <button variant="contained" type="submit" className={css.button}>
+        <Button variant="contained" type="submit" color="success">
           Add contact
-        </button>
+        </Button>
       </div>
       <ToastContainer autoClose={3000} position="top-left" />
     </form>

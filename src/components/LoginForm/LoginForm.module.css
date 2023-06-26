@@ -1,9 +1,12 @@
 .form {
-  width: 320px;
+  width: 300px;
+  margin: 0 auto;
 }
 
-.label {
+.button {
   display: flex;
-  flex-direction: column;
-  margin-bottom: 16px;
+  justify-content: center;
+  width: 195px;
+  padding-top: 20px;
+  margin: 0 auto;
 }
