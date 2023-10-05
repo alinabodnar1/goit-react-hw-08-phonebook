@@ -19,8 +19,8 @@ export default function Filter() {
       variant="standard"
       onChange={handleFilterChange}
       value={textFilter}
-      fullWidth="true"
       color="success"
+      fullWidth="true"
     />
   );
 }

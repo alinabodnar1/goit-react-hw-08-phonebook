@@ -16,14 +16,14 @@ export default function Contacts() {
   }, [dispatch]);
 
   return (
-    <div className={css.wrapper}>
-      <div>
+    <div >
+      <div className={css.wrapper}>
         <Form />
-        <div>{isLoading && 'Request in progress...'}</div>
-        <h2 className={css.titleContacts}>Your contacts:</h2>
-        <ContactsList />
+        <Filter />
       </div>
-      <Filter />
+      <div>{isLoading && 'Request in progress...'}</div>
+      <h2 className={css.titleContacts}>Your contacts:</h2>
+      <ContactsList />
     </div>
   );
 }

@@ -3,15 +3,26 @@
 }
 .container {
   display: flex;
+  flex-direction: column;
   gap: 30px;
-  margin-left: 30px;
-  width: 420px;
-  height: 55px;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 170px;
   padding: 5px;
   border-radius: 10px;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    margin-left: 30px;
+    width: 420px;
+  }
 }
 .button-container {
   display: block;
-  margin-left: 170px;
+  margin-left: 50px;
   margin-top: 20px;
+
+  @media (min-width: 768px) {
+    margin-left: 170px;
+  }
 }

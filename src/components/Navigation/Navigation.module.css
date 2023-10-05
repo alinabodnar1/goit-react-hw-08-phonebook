@@ -1,7 +1,19 @@
 .link {
   display: inline-block;
   text-decoration: none;
-  padding: 12px;
+  padding: 5px 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  
   font-weight: 700;
-  color: #2a363b;
+  color: var(--textColor);
+  transition: all 250ms var(--funcTransition) 0s; 
+
+  &:hover,
+  &:focus {
+    color: #FFFFFF;
+    background-color: var(--buttonHoverColor);
+    border-radius: 5px;
+  }
 }
+

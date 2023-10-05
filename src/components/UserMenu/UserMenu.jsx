@@ -10,20 +10,22 @@ export const UserMenu = () => {
   const handleLogOut = () => dispatch(logOut());
   return (
     <div className={css.wrapper}>
-      <p className={css.username}>
-        Welcome, {user.name}
+      <p className={css.welcome}>
+        Welcome, <span className={css.name}>{user.name}</span>
         <span role="img" aria-label="Greeting icon">
-          💁‍♀️
+          🤚
         </span>
       </p>
-      <Button
-        type="button"
-        onClick={handleLogOut}
-        variant="contained"
-        color="success"
-      >
-        Logout
-      </Button>
+      <div className={css.logout}>
+        <Button
+          type="button"
+          onClick={handleLogOut}
+          variant="contained"
+          color="success"
+        >
+          Logout
+        </Button>
+      </div>
     </div>
   );
 };

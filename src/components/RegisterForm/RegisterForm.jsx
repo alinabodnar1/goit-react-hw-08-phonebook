@@ -1,8 +1,9 @@
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/auth/operations';
-import css from './RegisterForm.module.css';
+import { NavLink } from 'react-router-dom';
 import { TextField } from '@mui/material';
 import Button from '@mui/material/Button';
+import css from './RegisterForm.module.css';
 
 export const RegisterForm = () => {
   const dispatch = useDispatch();
@@ -30,6 +31,7 @@ export const RegisterForm = () => {
         color="success"
         margin="normal"
         fullWidth="true"
+        placeholder="Enter your name"
         required
       />
       <TextField
@@ -40,6 +42,7 @@ export const RegisterForm = () => {
         color="success"
         margin="normal"
         fullWidth="true"
+        placeholder="your_email@gmail.com"
         required
       />
       <TextField
@@ -50,6 +53,7 @@ export const RegisterForm = () => {
         color="success"
         margin="normal"
         fullWidth="true"
+        placeholder="********"
         required
       />
       <div className={css.button}>
@@ -57,6 +61,12 @@ export const RegisterForm = () => {
           Register
         </Button>
       </div>
+      <h2 className={css.registered}>
+        Already registered?
+        <NavLink className={css.link} to="/login">
+          Log In
+        </NavLink>
+      </h2>
     </form>
   );
 };

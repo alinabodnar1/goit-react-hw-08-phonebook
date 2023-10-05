@@ -1,6 +1,7 @@
 .container {
   display: flex;
   gap: 10px;
+
 }
 .button-container {
   margin-left: 10px;
@@ -10,6 +11,11 @@
   color: white;
   background-color: brown;
   border-color: transparent;
-  border-radius: 10px;
-  cursor: pointer;
+  border-radius: 5px;
+
+  &:hover,
+  &:focus {
+    color: #FFFFFF;
+    background-color: var(--textColor);
+  }
 }

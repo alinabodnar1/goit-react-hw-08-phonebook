@@ -1,9 +1,18 @@
 .wrapper {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 20px;
 }
 
-.username {
+.welcome {
   font-weight: 700;
+  color: var(--textColor);
+}
+
+.name {
+  font-size: 16px;
+}
+
+.logout {
+  margin-bottom: 5px;
 }

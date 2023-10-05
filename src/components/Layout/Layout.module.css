@@ -1,6 +1,14 @@
 .layout {
-  max-width: 960px;
+  max-width: 480px;
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 0 10px;
   height: auto;
+
+  @media (min-width: 768px) {
+    max-width: 780px;
+    padding: 0 15px;
+  }
+  @media (min-width: 1200px) {
+    max-width: 1200px;
+  }
 }
