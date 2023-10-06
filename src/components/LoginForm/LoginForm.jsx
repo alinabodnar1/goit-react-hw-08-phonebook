@@ -50,12 +50,12 @@ export const LoginForm = () => {
         </div>
       </form>
       <div className={css.wrapper}>
-        <h2 className={css.account}>
+        <p className={css.account}>
           Don't have an account?
           <NavLink className={css.link} to="/register">
             Sign up
           </NavLink>
-        </h2>
+        </p>
       </div>
     </>
   );

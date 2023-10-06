@@ -1,9 +1,7 @@
 .link {
   display: inline-block;
   text-decoration: none;
-  padding: 5px 10px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  padding: 10px;
   font-weight: 700;
   color: var(--textColor);
   transition: all 250ms var(--funcTransition) 0s; 

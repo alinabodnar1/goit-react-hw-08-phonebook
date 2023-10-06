@@ -61,12 +61,12 @@ export const RegisterForm = () => {
           Register
         </Button>
       </div>
-      <h2 className={css.registered}>
+      <p className={css.registered}>
         Already registered?
         <NavLink className={css.link} to="/login">
           Log In
         </NavLink>
-      </h2>
+      </p>
     </form>
   );
 };

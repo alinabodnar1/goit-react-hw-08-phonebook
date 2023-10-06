@@ -12,8 +12,10 @@
 }
 
 .registered {
+  margin-left: 50px;
   margin-top: 15px;
   color: var(--textColor);
+  font-size: 12px;
 }
 
 .link {

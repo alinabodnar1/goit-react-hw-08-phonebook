@@ -17,9 +17,10 @@
   align-items: center;
 }
 .account {
-  display: inline-block;
+  margin-left: 50px;
   margin-top: 15px;
   color: var(--textColor);
+  font-size: 12px;
 }
 
 .link {
