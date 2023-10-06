@@ -1,4 +1,4 @@
-footer{
+footer {
   display: flex;
   align-items: center;
   align-content: center;
@@ -24,16 +24,15 @@ footer{
   @media (min-width: 1200px) {
     font-size: 16px;
   }
-
 }
 
-.link{
+.link {
   display: inline-block;
-  transition: all 250ms var(--funcTransition) 0s; 
+  transition: all 250ms var(--funcTransition) 0s;
 
   &:hover,
   &:focus {
-    color: #FFFFFF;
+    color: #ffffff;
     background-color: var(--textColor);
     border-radius: 5px;
   }

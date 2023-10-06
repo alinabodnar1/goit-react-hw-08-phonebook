@@ -1,10 +1,10 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Dna } from 'react-loader-spinner';
-import ContactsList from '../components/ContactsList/ContactsList';
-import Form from '../components/Form/Form';
 import { fetchContacts } from '../redux/contacts/operations';
 import { selectIsLoading } from 'redux/contacts/selectors';
+import ContactsList from '../components/ContactsList/ContactsList';
+import Form from '../components/Form/Form';
 import Filter from 'components/Filter/Filter';
 import css from './pages.module.css';
 

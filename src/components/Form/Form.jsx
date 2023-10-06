@@ -1,7 +1,6 @@
 import TextField from '@mui/material/TextField';
 import { useDispatch } from 'react-redux';
 import { addContact } from 'redux/contacts/operations';
-import { ToastContainer, toast } from 'react-toastify';
 import { Button } from '@mui/material';
 import css from './Form.module.css';
 
@@ -13,6 +12,7 @@ export default function Form() {
     const form = evt.target;
     const formName = form.elements.name.value;
     const formNumber = form.elements.number.value;
+
     if (formName !== '' || formNumber !== '') {
       dispatch(
         addContact({
@@ -23,7 +23,6 @@ export default function Form() {
       form.reset();
       return;
     }
-    toast.info("Contact can't be empty. Enter some text!");
   };
 
   return (
@@ -62,7 +61,6 @@ export default function Form() {
           Add contact
         </Button>
       </div>
-      <ToastContainer autoClose={3000} position="top-left" />
     </form>
   );
 }
