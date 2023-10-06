@@ -1,16 +1,23 @@
 import { Outlet } from 'react-router-dom';
+import { Suspense } from 'react';
 import { Toaster } from 'react-hot-toast';
 import { AppBar } from '../AppBar/AppBar';
-import { Suspense } from 'react';
+import { Footer } from '../Footer/Footer';
 import css from './Layout.module.css';
 
 export const Layout = () => {
   return (
-    <div className={css.layout}>
+    <div className={css.container}>
       <AppBar />
+
+      <div className={css.main}>
       <Suspense fallback={null}>
         <Outlet />
       </Suspense>
+      </div>
+      
+
+      <Footer />
       <Toaster position="top-right" reverseOrder={false} />
     </div>
   );

@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Dna } from 'react-loader-spinner';
 import ContactsList from '../components/ContactsList/ContactsList';
 import Form from '../components/Form/Form';
 import { fetchContacts } from '../redux/contacts/operations';
@@ -16,13 +17,23 @@ export default function Contacts() {
   }, [dispatch]);
 
   return (
-    <div >
+    <div>
       <div className={css.wrapper}>
         <Form />
         <Filter />
       </div>
-      <div>{isLoading && 'Request in progress...'}</div>
-      <h2 className={css.titleContacts}>Your contacts:</h2>
+      <div style={{ marginTop: '20px', marginBottom: '10px' }}>
+        {isLoading && (
+          <Dna
+            visible={true}
+            height="60"
+            width="60"
+            ariaLabel="dna-loading"
+            wrapperStyle={{}}
+            wrapperClass="dna-wrapper"
+          />
+        )}
+      </div>
       <ContactsList />
     </div>
   );

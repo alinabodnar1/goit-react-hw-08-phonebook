@@ -1,10 +1,10 @@
 /* Home page */
 .container {
   width: 380px;
-  height: 500px;
+  height: 550px;
   margin: 0 auto;
-  padding-bottom: 50px;
   align-items: center;
+
   justify-content: center;
   background-image: url('/src/images/phonebook.jpg');
   background-size: cover;
@@ -24,7 +24,7 @@
 
 .description {
   width: 300px;
-  padding-top: 290px;
+  padding-top: 280px;
   padding-left: 40px;
   padding-right: 40px;
   color: var(--textColor);
@@ -34,14 +34,14 @@
 
   @media (min-width: 768px) {
     width: 480px;
-    padding-top: 500px;
+    padding-top: 480px;
     padding-left: 140px;
     font-size: 14px;
     line-height: 1.5;
   }
   @media (min-width: 1200px) {
     width: 710px;
-    padding-top: 700px;
+    padding-top: 680px;
     padding-left: 240px;
     font-size: 20px;
   }
@@ -55,8 +55,7 @@
   }
 }
 
-.image-wrapper{
-
+.image-wrapper {
   display: block;
   width: 100%;
   margin-left: 150px;
@@ -67,37 +66,14 @@
 
   @media (min-width: 1200px) {
     margin-left: 500px;
+    margin-bottom: 10px;
   }
-  }
+}
 
-  /* padding-bottom: 20px;
-  /* width: 100%; */
-  /* height: auto;
- margin-left: 150px;
- margin-top: 10px;
-
- @media (min-width: 768px) {
-    margin-left: 400px;
- }
-
-@media (min-width: 1200px) {
-
-} */ 
-
-
-/* .image{
-  width: 50%;
-}  */
-/* --------------------------------------------- */
-
+/* Contacts page */
 .wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.titleContacts {
-  margin-top: 20px;
-  margin-bottom: 10px;
-  color: var(--textColor);
-}
