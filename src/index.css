@@ -17,7 +17,7 @@ body {
   background: linear-gradient(180deg, #ffffff 0%, var(--buttonHoverColor) 100%);
   width: 100%;
   min-height: 100vh;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.03em;
   font-size: 14px;
   font-weight: 400;
   margin: 0 auto;
